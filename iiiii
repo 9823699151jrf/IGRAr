@@ -1,0 +1,24 @@
+import time
+
+
+
+s = ['Скам']
+
+k = 0
+while k<=20:
+       for i in s:
+              print(i, end='')
+       s[k] = ' '
+       s.append('Скам')
+       print('\n\n\n')
+       time.sleep(0.5)
+       k=k+1
+       
+
+# while k>0:
+#        for i in s:
+#               print(i, end='')
+#        s.pop()
+#        print('\n\n\n')
+#        time.sleep(0.5)
+#        k=k+1
