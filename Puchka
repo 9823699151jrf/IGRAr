@@ -1,0 +1,29 @@
+import pygame
+
+class Gun():
+    def __init__(self, screen):
+        self.sreen = screen
+        self.image = pygame.image.load('img/3.png')
+        #self.image = pygame.image.load('img/1.png')
+        #self.image = pygame.image.load('img/2.png')
+        self.rect = self.image.get_rect()
+        self.sreen_rect = screen.get_rect()
+        self.rect.centerx = self.sreen_rect.centerx
+        self.rect.bottom = self.sreen_rect.bottom
+        self.krite = False
+        self.kleft = False
+        self.kup = False
+        self.kdown = False
+
+    def output(self):
+        self.sreen.blit(self.image, self.rect)
+
+    def update_gun(self):
+        if self.krite == True:
+            self.rect.centerx -= 1
+        if self.kleft == True:
+            self.rect.centerx -= 1
+        if self.kup == True:
+            self.rect.centerx -= 1
+        if self.kdown == True:
+            self.rect.bottom += 1
