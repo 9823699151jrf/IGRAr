@@ -1,0 +1,26 @@
+import sys
+import pygame
+
+def events(gun):
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_a:
+                gun.krite = True
+            if event.key == pygame.K_d:
+                gun.kleft = True
+            if event.key == pygame.K_s:
+                gun.kup = True
+            if event.key == pygame.K_w:
+                gun.kdown = True
+
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_a:
+                gun.krite = False
+            if event.key == pygame.K_d:
+                gun.kleft = False
+            if event.key == pygame.K_s:
+                gun.kup = False
+            if event.key == pygame.K_w:
+                gun.kdown = False
